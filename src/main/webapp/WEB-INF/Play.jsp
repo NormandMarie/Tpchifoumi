@@ -19,12 +19,14 @@
 
 <div class="container " style="text-align: center">
     <h1>Chifoumi</h1>
+    <br>
+    <br>
     <h1>Choix:</h1>
+    <br>
     <form method="POST" action="${pageContext.request.contextPath}/play">
-
-            <input class="m-3" type="submit" name="choix" value="chi"> <br>
-            <input class="m-3" type="submit" name="choix" value="fou"> <br>
-            <input class="m-3" type="submit" name="choix" value="mi"> <br>
+        <button class = "bg-dark text-white p-3 m-3"type="submit" name="choix" value="pierre">pierre</button>
+        <button class = "bg-dark text-white p-3 m-3" type="submit" name="choix" value="feuille">feuille</button>
+        <button  class = "bg-dark text-white p-3 m-3" type="submit" name="choix" value="ciseaux">ciseaux</button>
     </form>
     </div>
 

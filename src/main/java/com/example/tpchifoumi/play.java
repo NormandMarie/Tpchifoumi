@@ -15,7 +15,6 @@ import static java.lang.System.out;
 public class play extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Affiche la vue
         request
                 .getRequestDispatcher("/WEB-INF/Play.jsp")
                 .forward(request, response);
@@ -28,7 +27,7 @@ public class play extends HttpServlet {
         int partiesGagneesOrdinateur = 0;
         String choix = request.getParameter("choix");
 
-        String[] choixPossibles = {"chi", "fou", "mi"};
+        String[] choixPossibles = {"feuille", "ciseaux", "pierre"};
         String Finale = null;
         Random random = new Random();
         int index = random.nextInt(3);
@@ -44,9 +43,9 @@ public class play extends HttpServlet {
         }
         if (choix.equals(choixOrdinateur)) {
             gagnant = "Match nul !";
-        } else if (choix.equals("chi") && choixOrdinateur.equals("fou")
-                || choix.equals("fou") && choixOrdinateur.equals("mi")
-                || choix.equals("mi") && choixOrdinateur.equals("chi")) {
+        } else if (choix.equals("ciseaux") && choixOrdinateur.equals("feuille")
+                || choix.equals("feuille") && choixOrdinateur.equals("pierre")
+                || choix.equals("pierre") && choixOrdinateur.equals("ciseaux")) {
             partiesGagneesUtilisateur++;
             gagnant = "tu a gagné !";
         } else {
