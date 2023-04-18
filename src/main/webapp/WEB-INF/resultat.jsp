@@ -15,19 +15,19 @@
     <title>résultat</title>
     <link rel="stylesheet" type="text/css" href="../../com.example.tpchifoumi.style.css">
 </head>
-<body>
+<body style="background-color: rgb(51,51,51);">
 
-<h1> résultat</h1>
-<div style="display: flex; justify-content: space-around;">
-    <div>
+<h1 style="text-align: center; margin: 10px"> résultat</h1>
+<div style="display: flex; justify-content: space-between;">
+    <div class="m-3">
         <h1> Voici ton choix : </h1>
         <h3> ${choix}</h3>
     </div>
     <div>
         <h1 class="lien"> ${gagnant} </h1>
-       <h1><a href="play">rejouer</a></h1>
+       <h1><a style ="text-decoration: none; color: RGBA(148,108,212,0.28);"href="play">rejouer</a></h1>
     </div>
-    <div>
+    <div class="m-3">
         <h1> Voici le choix de l'ordi: </h1>
         <h3>${choixOrdinateur}</h3>
     </div>
